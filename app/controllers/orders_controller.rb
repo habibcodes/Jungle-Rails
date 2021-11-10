@@ -2,6 +2,12 @@ class OrdersController < ApplicationController
 
   def show
     @order = Order.find(params[:id])
+    # extract items from order
+    @line_items = @order.line_items
+    # map those items to @products to 
+    # be passed into ERB views in _item
+    # and shows.html.erb
+    @products = @line_items.map {|line_item| Product.find(line_item.product_id)}
   end
 
   def create
