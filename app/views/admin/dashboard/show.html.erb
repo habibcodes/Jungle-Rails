@@ -1,2 +1,23 @@
-<h1>Admin::Dashboard#show</h1>
-<p>Find me in app/views/admin/dashboard/show.html.erb</p>
+<%# <h1>Admin::Dashboard#show</h1>
+<p>Find me in app/views/admin/dashboard/show.html.erb</p> %>
+
+<h3>Store Product & Category Stats:</h3>
+
+<div class="jumbotron">
+  <table class="table table-condensed">
+    <tr>
+        <th scope="col" class="text-center status">
+          <%= link_to 'Product Count', controller: 'admin/products' %>
+        </th>
+        <th scope="col" class="text-center status">
+          <%= link_to 'Category Count', controller: 'admin/products' %>
+        </th>
+    </tr>
+    <tbody>
+      <tr>
+        <td class="active text-center status"><%= @total_product_count %></td>
+        <td class="active text-center status"><%= @total_category_count %></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
