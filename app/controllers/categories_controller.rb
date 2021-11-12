@@ -1,3 +1,6 @@
+# this categories_controller controls 
+# Store Product & Category Stats page
+
 class CategoriesController < ApplicationController
 
   def show
