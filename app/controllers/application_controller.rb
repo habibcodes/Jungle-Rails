@@ -5,6 +5,18 @@ class ApplicationController < ActionController::Base
 
   private
 
+  # Login Logic #--------------------------------
+  # method to lookup user for login
+  def current_user
+    @current_user ||= User.find(session[:user_id]) if session[:user_id]
+  end
+  helper_method :current_user
+  # method to authorise user by asking for credentials if not logged in
+  def authorize
+    redirect_to '/login' unless current_user
+  end
+
+  # Shopping cart and checkout logic # ------------
   def cart
     @cart ||= cookies[:cart].present? ? JSON.parse(cookies[:cart]) : {}
   end

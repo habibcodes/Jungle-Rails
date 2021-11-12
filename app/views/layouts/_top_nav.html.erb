@@ -41,7 +41,6 @@
             <li><%= link_to 'Products',  [:admin, :products] %></li>
             <%# Link for adding new categories %>
             <li><%= link_to 'Categories',  [:admin, :categories] %></li>
-
           </ul>
         </li>
         <li>
@@ -49,6 +48,13 @@
             <%= fa_icon "shopping-cart" %> My Cart (<%= cart.size %>)
           <% end %>
         </li>
+        <% if current_user %>
+          <li>Signed in as <%= current_user.name %></li>
+          <li><%= link_to "Logout", '/logout' %></li>
+        <% else %>
+          <li><%= link_to 'Login', '/login' %></li>
+          <li><%= link_to 'Signup', '/signup' %></li>
+        <% end %>
       </ul>
     </div>
   </div>
