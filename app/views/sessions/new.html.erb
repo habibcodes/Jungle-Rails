@@ -1,11 +1,29 @@
 <%# User login form %>
 
-<h1>Login</h1>
+<section class="admin-categories-new">
 
-<%= form_tag '/login' do %>
+  <header class="page-header">
+    <h1>Login</h1>
+  </header>
 
-  Email: <%= text_field_tag :email %>
-  Password: <%= password_field_tag :password %>
-  <%= submit_tag "Submit" %>
+  <div class="row">
+    <div class="col-sm-6 col-sm-offset-1">
+      <%= form_tag '/login' do %>
+        
+        <div class="form-group">
+          <label for="email" >Email</label>
+          <%= text_field_tag :email, nil, class: 'form-control', type: 'email', placeholder: 'Enter your email here' %>  
+        </div>
 
-<% end %>
+        <div class="form-group">
+          <label for="password" >Password</label>
+          <%= password_field_tag :password, nil, class: 'form-control', type: 'password', placeholder: 'Enter your password here' %>
+        </div>
+
+        <div class="text-center">
+          <%= submit_tag 'Submit ', class: 'btn btn-md btn-success' %>
+        </div>
+      <% end %>   
+    </div>
+  </div>
+</section>

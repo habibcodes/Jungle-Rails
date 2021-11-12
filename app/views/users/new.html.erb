@@ -1,27 +1,46 @@
 <%# Create new user form %>
 
-<h1>Signup!</h1>
+<section class="admin-categories-new">
 
-<%= form_for :user, url: '/users' do |f| %>
+  <header class="page-header">
+    <h1>Signup for an Account</h1>
+  </header>
 
-<div class="form-group">
-  Name: <%= f.text_field :name %>
-</div>
+  <div class="row">
+    <div class="col-sm-6 col-sm-offset-1">
 
-<div class="form-group">
-  Email: <%= f.text_field :email %>
-</div>
+      <%= form_for :user, url: '/users' do |form| %>
+        
+        <div class="form-group">
+          <%= form.label :first_name %>
+          <%= form.text_field :first_name, class: 'form-control', type: 'text', placeholder: 'Enter your name here' %>          
+        </div>
 
-<div class="form-group">
-  Password: <%= f.password_field :password %>
-</div>
+        <div class="form-group">
+          <%= form.label :last_name %>
+          <%= form.text_field :last_name, class: 'form-control', type: 'text', placeholder: 'Enter your lastname here' %>      
+        </div>
 
-<div class="form-group">
-  Password Confirmation: <%= f.password_field :password_confirmation %>
-</div>
+        <div class="form-group">
+          <%= form.label :email %>
+          <%= form.text_field :email, class: 'form-control', type: 'email', placeholder: 'Enter your email here' %>   
+        </div>
 
-<div class="form-group">
-  <%= f.submit "Submit" %>
-</div>
+        <div class="form-group">
+          <%= form.label :password %>
+          <%= form.password_field :password, class: 'form-control', type: 'password', placeholder: 'Enter your password' %>
+        </div>
 
-<% end %>
+        <div class="form-group">
+          <%= form.label :confirm_password %>
+          <%= form.password_field :password_confirmation, class: 'form-control', type: 'password', placeholder: 'Confirm your password' %>
+        </div>
+
+        <div class="text-center"><%= form.submit 'Submit ', class: 'btn btn-md btn-success' %></div>
+      <% end %>
+
+   
+    </div>
+  </div>
+
+</section>
