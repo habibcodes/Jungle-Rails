@@ -30,6 +30,8 @@ Rails.application.routes.draw do
     resources :products, except: [:edit, :update, :show]
     # admin new category page
     resources :categories, only: [:index, :new, :create]
+    # admin sales
+    resources :sales, only: [:index, :new]
   end
 
   # The priority is based upon order of creation: first created -> highest priority.
