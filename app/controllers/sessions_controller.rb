@@ -22,4 +22,15 @@ class SessionsController < ApplicationController
     redirect_to '/login'
   end
 
+  # method to authenticate user email and password
+  def self.authenticate_with_credentials(email, password)
+    user = User.find_by_email(email)
+    # If the user exists AND the password entered is correct.
+    if user && user.authenticate(password)
+      user
+    else
+      nil
+    end
+  end
+
 end
