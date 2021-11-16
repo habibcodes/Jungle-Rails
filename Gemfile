@@ -59,3 +59,10 @@ group :production do
   gem 'newrelic_rpm'
   gem 'rails_12factor'
 end
+
+# gems installed for testing feature specs
+group :test do
+  gem 'capybara'
+  gem 'poltergeist'
+  gem 'database_cleaner'
+end
