@@ -65,6 +65,7 @@ The admin dashboard allows authorised users to
 3. Add new products
    !["add new products"](https://raw.githubusercontent.com/habibcodes/Jungle-Rails/master/images/add%20new%20product%20pg.png)
 4. Add new categories
+
    !["add new category"](https://raw.githubusercontent.com/habibcodes/Jungle-Rails/master/images/add%20new%20category.png)
 5. Create and manage sales
    !["create/manage sales"](https://raw.githubusercontent.com/habibcodes/Jungle-Rails/master/images/manage%20sales.png)
