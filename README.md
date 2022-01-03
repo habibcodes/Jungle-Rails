@@ -43,6 +43,7 @@ Provides details for a specific product accessed from the landing page.
 ### Contextual Menus for Users OR Admin
 
 Categories are listed in a menu available to all users, while an Admin dropdown is hidden behind an authentication, granding access to further functionalities.
+
 !["categories menu"](https://raw.githubusercontent.com/habibcodes/Jungle-Rails/master/images/categories%20menu.png)
 !["admin menu"](https://raw.githubusercontent.com/habibcodes/Jungle-Rails/master/images/categories%20menu.png)
 
